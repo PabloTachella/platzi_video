@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        background-color: blueviolet;
+    }
+    .header {  
+        display: flex;
+        height: 80px;
+        padding: 0px 15px;
+        justify-content: space-between;
+        align-items: center;
+        background-color: crimson;
+    }
+    .header__img {
+        width: 200px;
+    }
+    .header__menu{
+        
+    }
+    .header__menu--profile {
+        display: flex;
+        justify-content: space-between;
+    }
+    .header__menu--profile img {
+        margin-right: 15px;
+    }
+    .header__menu ul{
+        list-style: none; /*elimina los puntos de item*/
+        padding: 0px;
+        position: absolute;
+        width: 100px;
+        text-align: right;
+    }
+
+</style>
+<body>
+    <header class="header">
+        <img class= "header__img" src="images/logo-platzi-video.png" alt="Logo Platzi logo-platzi-video">
+        <div class="header__menu">
+            <div class="header__menu--profile">
+                <img src="images/user-icon.png" alt="User icon">
+                <p>Perfil</p>
+            </div>
+            <ul>
+                <li><a href="/"></a>Cuenta</li>
+                <li><a href="/"></a>Cerrar Sesión</li>
+            </ul>
+        </div>
+    </header>
+</body>
+</html>
