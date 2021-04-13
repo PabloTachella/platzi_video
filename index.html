@@ -4,40 +4,59 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <style>
     body {
         margin: 0;
-        background-color: blueviolet;
+        font-family: 'Mulish', sans-serif;
+        background-color: #AB88FF;
     }
     .header {  
         display: flex;
         height: 80px;
-        padding: 0px 15px;
+        padding: 0px 30px;
         justify-content: space-between;
         align-items: center;
-        background-color: crimson;
     }
     .header__img {
         width: 200px;
     }
-    .header__menu{
-        
+    .header__menu ul{
+        display: none; /*Vuelve al elemento no visible sin removerlo del dom*/
+        list-style: none; /*elimina los puntos de item*/
+        padding: 0px;
+        margin: 0 0 0 -7px;
+        position: absolute;
+        width: 100px;
+        text-align: right;
+    }
+    .header__menu:hover ul, .header__menu ul:hover ul {
+        display: block;
+    }
+    .header__menu li {
+        margin: 10px 0px;
+    }
+    .header__menu li a {
+        color: white;
+        text-decoration: none;
+    }
+    .header__menu li a:hover {
+        text-decoration: underline;
     }
     .header__menu--profile {
         display: flex;
         justify-content: space-between;
+        align-items: center;
     }
     .header__menu--profile img {
+        width: 40px;
         margin-right: 15px;
     }
-    .header__menu ul{
-        list-style: none; /*elimina los puntos de item*/
-        padding: 0px;
-        position: absolute;
-        width: 100px;
-        text-align: right;
+    .header__menu--profile p {
+        color: white;
+        margin: 0px;
     }
 
 </style>
@@ -50,8 +69,8 @@
                 <p>Perfil</p>
             </div>
             <ul>
-                <li><a href="/"></a>Cuenta</li>
-                <li><a href="/"></a>Cerrar Sesión</li>
+                <li><a href="/">Cuenta</a></li>
+                <li><a href="/">Cerrar Sesión</a></li>
             </ul>
         </div>
     </header>
