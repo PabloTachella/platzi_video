@@ -78,7 +78,41 @@
     ::placeholder {
         color: white;
     }
-
+    .carousel {
+        width: 100%;
+        overflow: scroll;
+        padding: 30px;
+        position: relative; /*todos los elementos dentro de este bloque se ubicaran en relacion a el*/
+    }
+    .carousel__container {
+        white-space: nowrap; /*los elementos se ubican en una sola fila que se extendera por mas
+        que se acabe la pantalla para lo que sera util el scroll*/
+        margin: 70px 0px; /*espacio donde crece la imagen al hacer hover*/
+        padding-bottom: 10px; /*necesario para que no se corte la imagen al cercer*/
+    }
+    .carousel__item {
+        background-color: white;
+        cursor: pointer; /*cambia la apariencia del cursor al hacer hover sobre este elemento*/
+        display: inline-block; /*alinea horizontalmente*/
+        width: 200px;
+        height: 250px;
+        border-radius: 20px;
+        overflow: hidden; /*para que la imagen ocupe todo el item por mas que tenga border-radius*/
+        margin-right: 10px;
+        transition: 450ms all; /*para que la animacion quede mas fluida*/
+        transform-origin: center left; /*que la animacion sea centrada y comience de izquierda a derecha*/
+    }
+    .carousel__item:hover ~ .carousel__item { /* ~ selecciona el item que este inmediatamente despues
+     y todos los siguientes*/
+        transform: translate3d(100px, 0, 0); /*desplaza todos los elementos a la derecha*/
+    }
+    .carousel__container:hover .carousel__item {
+        opacity: 0.3;
+    }
+    .carousel__container:hover .carousel__item:hover {
+        transform: scale(1.5);
+        opacity: 1;
+    }
 </style>
 <body>
     <header class="header">
@@ -98,6 +132,19 @@
     <section class="main">
         <h2 class="main__title">¿Qué quieres ver hoy?</h2>
         <input type="text" class="input" placeholder="Buscar...">
+    </section>
+
+    <section class="carousel">
+        <div class="carousel__container">
+            <div class="carousel__item"></div>
+            <div class="carousel__item"></div>
+            <div class="carousel__item"></div>
+            <div class="carousel__item"></div>
+            <div class="carousel__item"></div>
+            <div class="carousel__item"></div>
+            <div class="carousel__item"></div>
+            <div class="carousel__item"></div>
+        </div>
     </section>
 </body>
 </html>
