@@ -16,7 +16,7 @@ body {
     width: 200px;
     margin-left: 30px;
 }
-.login {
+.login, .register {
     background: linear-gradient(#21c08b, #ab88ff);
     display: flex;
     align-items: center;
@@ -25,7 +25,7 @@ body {
     padding: 0px 30px;
     min-height: calc(100vh - 200px); /*el minimo del alto de login sera de vh o view height menos 200px*/
 }
-.login__container {
+.login__container, .register__container {
     background-color: rgba(255, 255, 255, 0.1);
     border: 2px solid white;
     border-radius: 40px;
@@ -37,7 +37,7 @@ body {
     justify-content: space-around;
     flex-direction: column;
 }
-.login__container--form {
+.login__container--form, .register__container--form {
     display: flex;
     flex-direction: column;
 }
@@ -55,7 +55,14 @@ body {
     font-size: 14px;
     text-decoration: none;
 }
-.login__container--remember-me a:hover {
+.register__container a {
+    color: white;
+    display: flex;
+    font-size: 16px;
+    text-decoration: none;
+    justify-content: center;
+}
+.login__container--remember-me a:hover, .register__container a:hover {
     text-decoration: underline;
 }
 .login__container--social-media > div{
