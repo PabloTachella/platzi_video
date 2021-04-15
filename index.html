@@ -87,6 +87,7 @@
     .main {
         display: flex;
         flex-direction: column;
+        margin: 50px 0px;
     }
     .main div {
         display: flex;
@@ -101,14 +102,24 @@
         height: 40px;
         font-size: 15px;
         outline: none;
+        padding-left: 15px;
     }
     ::placeholder {
         color: white;
     }
+
+    .categories__title {
+        font-size: 16px;
+        color: white;
+        padding-left: 30px;
+        margin: 0;
+    }
+
     .carousel {
+        box-sizing: border-box; /*integra al padding dentro del 100% del width*/
         width: 100%;
         overflow: scroll;
-        padding: 30px;
+        padding: 0px 30px;
         position: relative; /*todos los elementos dentro de este bloque se ubicaran en relacion a el*/
     }
     .carousel__container {
@@ -158,7 +169,45 @@
         right: 0;
         bottom: 0;
         left: 0;
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
     }
+    .carousel-item__details img {
+        width: 20px;
+        margin-bottom: 4px;
+    }
+    .carousel-item__details--title {
+        color: white;
+        font-size: 11px;
+        font-weight: bold;
+        margin: 2px;
+    }
+    .carousel-item__details--subtitle {
+        color: white;
+        font-size: 9px;
+        margin: 2px;
+    }
+    .carousel-item__details:hover {
+        opacity: 1;
+    }
+
+    .footer {
+    display: flex;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+}
+.footer a {
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    padding-left: 30px;
+    text-decoration: none;
+}
+.footer a:hover {
+    text-decoration: underline;
+}
 </style>
 <body>
     <header class="header">
@@ -180,6 +229,8 @@
     <div><input type="text" class="input" placeholder="Buscar..."></div>
     </section>
 
+    <h2 class="categories__title">Mi lista</h2>
+
     <section class="carousel">
         <div class="carousel__container">
             <div class="carousel-item">
@@ -193,13 +244,91 @@
                     <p class="carousel-item__details--subtitle">2021 16+ 120 minutos</p>
                 </div>
             </div>
-            <div class="carousel-item"></div>
-            <div class="carousel-item"></div>
-            <div class="carousel-item"></div>
-            <div class="carousel-item"></div>
-            <div class="carousel-item"></div>
-            <div class="carousel-item"></div>
-            <div class="carousel-item"></div>
+            
+            <div class="carousel-item">
+                <img class="carousel-item__img" src="https://source.unsplash.com/random?movie2" alt="">
+                <div class="carousel-item__details">
+                    <div>
+                        <img src="images/icon-play.png" alt="play">
+                        <img src="images/icon-plus.png" alt="plus">
+                    </div>
+                    <p class="carousel-item__details--title">Título descriptivo</p>
+                    <p class="carousel-item__details--subtitle">2021 16+ 120 minutos</p>
+                </div>
+            </div>
+                        
+            <div class="carousel-item">
+                <img class="carousel-item__img" src="https://source.unsplash.com/random?movie3" alt="">
+                <div class="carousel-item__details">
+                    <div>
+                        <img src="images/icon-play.png" alt="play">
+                        <img src="images/icon-plus.png" alt="plus">
+                    </div>
+                    <p class="carousel-item__details--title">Título descriptivo</p>
+                    <p class="carousel-item__details--subtitle">2021 16+ 120 minutos</p>
+                </div>
+            </div>
+                        
+            <div class="carousel-item">
+                <img class="carousel-item__img" src="https://source.unsplash.com/random?movie4" alt="">
+                <div class="carousel-item__details">
+                    <div>
+                        <img src="images/icon-play.png" alt="play">
+                        <img src="images/icon-plus.png" alt="plus">
+                    </div>
+                    <p class="carousel-item__details--title">Título descriptivo</p>
+                    <p class="carousel-item__details--subtitle">2021 16+ 120 minutos</p>
+                </div>
+            </div>
+                        
+            <div class="carousel-item">
+                <img class="carousel-item__img" src="https://source.unsplash.com/random?movie5" alt="">
+                <div class="carousel-item__details">
+                    <div>
+                        <img src="images/icon-play.png" alt="play">
+                        <img src="images/icon-plus.png" alt="plus">
+                    </div>
+                    <p class="carousel-item__details--title">Título descriptivo</p>
+                    <p class="carousel-item__details--subtitle">2021 16+ 120 minutos</p>
+                </div>
+            </div>
+                        
+            <div class="carousel-item">
+                <img class="carousel-item__img" src="https://source.unsplash.com/random?movie6" alt="">
+                <div class="carousel-item__details">
+                    <div>
+                        <img src="images/icon-play.png" alt="play">
+                        <img src="images/icon-plus.png" alt="plus">
+                    </div>
+                    <p class="carousel-item__details--title">Título descriptivo</p>
+                    <p class="carousel-item__details--subtitle">2021 16+ 120 minutos</p>
+                </div>
+            </div>
+                        
+            <div class="carousel-item">
+                <img class="carousel-item__img" src="https://source.unsplash.com/random?movie7" alt="">
+                <div class="carousel-item__details">
+                    <div>
+                        <img src="images/icon-play.png" alt="play">
+                        <img src="images/icon-plus.png" alt="plus">
+                    </div>
+                    <p class="carousel-item__details--title">Título descriptivo</p>
+                    <p class="carousel-item__details--subtitle">2021 16+ 120 minutos</p>
+                </div>
+            </div>
+                        
+            <div class="carousel-item">
+                <img class="carousel-item__img" src="https://source.unsplash.com/random?movie8" alt="">
+                <div class="carousel-item__details">
+                    <div>
+                        <img src="images/icon-play.png" alt="play">
+                        <img src="images/icon-plus.png" alt="plus">
+                    </div>
+                    <p class="carousel-item__details--title">Título descriptivo</p>
+                    <p class="carousel-item__details--subtitle">2021 16+ 120 minutos</p>
+                </div>
+            </div>
+            
         </div>
     </section>
 
